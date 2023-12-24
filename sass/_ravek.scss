@@ -1,0 +1,71 @@
+@use "mixin";
+@use "color";
+@use "font";
+
+/*================================
+ravek
+===============================*/
+.ravek {
+  padding: 103px 0;
+  @include mixin.mq(sp) {
+    padding: 80px 0px;
+
+  }
+}
+
+.ravek__inner {
+}
+
+.ravek__text {
+  margin-top: 29px;
+  color: color.$base-color;
+  text-align: center;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32.4px;
+  @include mixin.mq(sp) {
+    font-size: 1.6rem;
+    line-height: 25.6px;
+  }
+  span {
+    font-weight: 700;
+  }
+}
+
+.ravek__link {
+  margin-top: 38px;
+  text-align: center;
+  @include mixin.mq(sp) {
+    margin-top: 24px;
+  }
+  a {
+    color: color.$base-color2;
+    background: color.$main-color;
+    width: 400px;
+    padding: 20px 0;
+    border-radius: 50px;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 50px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+    @include mixin.mq(sp) {
+      font-size: 1.8rem;
+      line-height: 18px;
+      width: 300px;
+    }
+
+    &:hover {
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15),
+        0 0 5px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      border:1px solid color.$main-color;
+      background: color.$base-color2;
+      color: color.$main-color;
+    }
+  }
+}

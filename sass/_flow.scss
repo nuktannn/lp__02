@@ -1,0 +1,189 @@
+@use "mixin";
+@use "color";
+@use "font";
+
+/*================================
+flow
+===============================*/
+.flow {
+  background: color.$base-color3;
+  padding: 100px 0 80px;
+
+  @include mixin.mq(sp) {
+    padding: 55px 0px 65px;
+  }
+}
+
+.flow__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  @include mixin.mq(tab) {
+    max-width: 900px;
+  }
+  @include mixin.mq(sp) {
+    max-width: 100%;
+  }
+}
+
+.flow__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 115px;
+  margin-top: 55px;
+  @include mixin.mq(tab) {
+    gap: 10px;
+  }
+  @include mixin.mq(sp) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.flow__left {
+  position: relative;
+  width: 100%;
+  &::before {
+    content: "01";
+    position: absolute;
+    top: -10px;
+    left: -4px;
+    color: color.$main-color;
+    font-family: font.$font-en;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @include mixin.mq(sp) {
+      top: -22px;
+      left: 0px;
+    }
+  }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      right: -42%;
+      width: 100px;
+      height: 60px;
+      background: url(../img/flow__arrow.png) no-repeat center center / contain;
+      @include mixin.mq(sp) {
+        display: none;
+    }
+    }
+}
+
+.flow__image {
+  background: color.$main-color3;
+  width: 280px;
+  height: 191px;
+  border-radius: 30px;
+  padding: 20px 40px;
+  @include mixin.mq(sp) {
+    width: 100%;
+  }
+  img {
+    width: 199px;
+    margin: 0 auto;
+  }
+}
+
+.flow__body {
+  width: 280px;
+  text-align: center;
+  @include mixin.mq(sp) {
+    width: 100%;
+  }
+}
+
+.flow__title {
+  margin-top: 20px;
+  color: color.$base-color;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @include mixin.mq(sp) {
+    margin-top: 14px;
+    font-size: 2rem;
+  }
+}
+
+.flow__text {
+  display: inline-block;
+  text-align: left;
+  margin-top: 8px;
+  color: color.$base-color;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+  height: 116px;
+  @include mixin.mq(sp) {
+    height: auto;
+    margin-top: 4px;
+  }
+}
+
+.flow__center {
+    position: relative;
+    width: 100%;
+
+  &::before {
+    content: "02";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    color: color.$main-color;
+    font-family: font.$font-en;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @include mixin.mq(sp) {
+      top: -22px;
+      left: 0px;
+    }
+  }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 20%;
+      right: -42%;
+      width: 100px;
+      height: 60px;
+      background: url(../img/flow__arrow.png) no-repeat center center / contain;
+      @include mixin.mq(sp) {
+        display: none;
+    }
+    }
+    @include mixin.mq(sp) {
+        margin-top: 80px;
+    }
+}
+
+.flow__right {
+    position: relative;
+    width: 100%;
+  &::before {
+    content: "03";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    color: color.$main-color;
+    font-family: font.$font-en;
+    font-size: 4.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @include mixin.mq(sp) {
+      top: -22px;
+      left: 0px;
+    }
+  }
+  @include mixin.mq(sp) {
+    margin-top: 90px;
+}
+}

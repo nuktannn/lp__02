@@ -1,0 +1,109 @@
+@use "mixin";
+@use "color";
+@use "font";
+
+/*================================
+qa
+===============================*/
+.qa {
+  background: color.$base-color3;
+  padding: 100px 0;
+  @include mixin.mq(sp) {
+    padding: 50px 0 62px;
+  }
+}
+
+.qa__inner {
+}
+
+.qa__heading-title {
+  margin-bottom: 60px;
+  @include mixin.mq(sp) {
+    margin-bottom: 40px;
+  }
+}
+
+.qa__wrapper {
+  width: 920px;
+  margin: 0 auto;
+  @include mixin.mq(tab) {
+    width: 100%;
+  }
+  @include mixin.mq(sp) {
+    width: 100%;
+  }
+  & + & {
+    margin-top: 24px;
+  }
+}
+
+.qa__top {
+  background: color.$main-color;
+  padding: 22px 56px;
+  border-radius: 10px;
+  @include mixin.mq(sp) {
+    padding: 10px 10px 8px 47px;
+  }
+}
+
+.qa__title {
+  color: color.$base-color2;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  position: relative;
+  @include mixin.mq(sp) {
+     font-size:  1.6rem;
+     line-height: 25.6px;
+  }
+  &::before {
+    content: "Q";
+    position: absolute;
+    top: -4px;
+    left: -30px;
+    color: color.$base-color2;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+    @include mixin.mq(sp) {
+      top: 0px;
+    }
+  }
+}
+
+.qa__bottom {
+  background: color.$base-color2;
+  padding: 22px 25px 22px 56px;
+  border-radius: 10px;
+  margin-top: 14px;
+  @include mixin.mq(sp) {
+    padding: 12px 16px 12px 40px;
+    margin-top: 16px;
+  }
+}
+
+.qa__text {
+  color: color.$base-color;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32.4px;
+  position: relative;
+  @include mixin.mq(sp) {
+    font-size: 1.6rem;
+    line-height: 25.6px;
+  }
+  &::before {
+    content: "A";
+    position: absolute;
+    top: 5px;
+    left: -30px;
+    color: color.$base-color;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 22px;
+  }
+}

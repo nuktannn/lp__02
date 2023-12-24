@@ -1,0 +1,367 @@
+@use "mixin";
+@use "color";
+@use "font";
+
+/*================================
+price
+===============================*/
+.price {
+  padding: 100px 0 114px;
+
+  @include mixin.mq(sp) {
+    padding: 80px 0 60px;
+  }
+}
+
+.price__inner {
+  overflow-x: auto;
+
+   /* Chrome, Safari 対応 */
+   &::-webkit-scrollbar {
+    width: 30px;
+    height: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: color.$main-color2;
+    border-radius: 20px;
+  }
+}
+
+.price__items {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 30px;
+
+  @include mixin.mq(tab) {
+    margin-top: 80px;
+    width: 1300px;
+  }
+  @include mixin.mq(sp) {
+    margin-top: 40px;
+    width: 900px;
+  }
+}
+
+.price__item-space-bg {
+  background: color.$base-color2;
+}
+.price__item {
+  width: 255px;
+  height: 260px;
+  @include mixin.mq(sp) {
+    width: 170px;
+    height: 200px;
+  }
+}
+
+.price__item-bg {
+  background: color.$base-color;
+}
+.price__item-text {
+  color: color.$base-color2;
+  text-align: center;
+  font-size: 2.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin-top: -18px;
+  @include mixin.mq(sp) {
+    font-size: 1.8rem;
+    margin-top: -6px;
+  }
+}
+
+.price__item-cost {
+  margin-top: 17px;
+  color: color.$base-color2;
+  text-align: center;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @include mixin.mq(sp) {
+    margin-top: 11px;
+    font-size: 1.2rem;
+  }
+  span {
+    color: color.$base-color2;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @include mixin.mq(sp) {
+      font-size: 2.8rem;
+    }
+  }
+}
+
+.price__item-link {
+  margin-top: 28px;
+  text-align: center;
+  @include mixin.mq(sp) {
+    margin-top: 19px;
+  }
+
+  a {
+    background: color.$base-color2;
+    color: color.$base-color;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    border-radius: 50px;
+    padding: 16px 45px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+    @include mixin.mq(sp) {
+      font-size: 1.4rem;
+      line-height: 16px;
+      padding: 13px 19px;
+    }
+
+    &:hover {
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15),
+        0 0 5px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      background: color.$base-color;
+      color: color.$base-color2;
+      border: 1px solid color.$base-color2;
+    }
+  }
+}
+
+.price__item2 {
+  background: color.$main-color;
+  height: 276px;
+  transform: translateY(-17px);
+  width: 255px;
+  padding-top: 17px;
+  @include mixin.mq(sp) {
+    width: 170px;
+    height: 210px;
+  }
+}
+
+.price__item-text2 {
+  color: color.$base-color2;
+  text-align: center;
+  font-size: 2.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @include mixin.mq(sp) {
+    font-size: 2.2rem;
+  }
+}
+
+.price__item-cost2 {
+  margin-top: 7px;
+  color: color.$base-color2;
+  text-align: center;
+  font-size: 2.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @include mixin.mq(sp) {
+    margin-top: 11px;
+    font-size: 1.8rem;
+  }
+  span {
+    color: color.$base-color2;
+    font-size: 4.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    @include mixin.mq(sp) {
+      font-size: 3.2rem;
+    }
+  }
+}
+
+.price__item-link2 {
+  margin-top: 28px;
+  text-align: center;
+
+  @include mixin.mq(sp) {
+    margin-top: 19px;
+  }
+
+  a {
+    border: 1px solid color.$base-color2;
+    color: color.$base-color2;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    border-radius: 50px;
+    padding: 16px 45px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+
+    @include mixin.mq(sp) {
+      font-size: 1.4rem;
+      line-height: 16px;
+      padding: 13px 19px;
+    }
+
+    &:hover {
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15),
+        0 0 5px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      border: 1px solid color.$main-color;
+      background: color.$base-color2;
+      color: color.$main-color;
+    }
+  }
+}
+
+.table2 {
+  transform: translateY(-17px);
+}
+td,
+th {
+  border-collapse: collapse;
+  margin: 0 auto;
+  @include mixin.mq(sp) {
+    margin-left: 20px;
+  }
+}
+td,
+th {
+  width: 255px;
+  height: 60px;
+  vertical-align: middle;
+  @include mixin.mq(sp) {
+    width: 170px;
+    height: 42px;
+  }
+}
+th {
+  color: color.$base-color;
+  font-size: 2.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  padding-left: 30px;
+  @include mixin.mq(sp) {
+    font-size: 1.4rem;
+    line-height: 15px;
+  }
+}
+
+td {
+  text-align: center;
+  color: color.$base-color;
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  @include mixin.mq(sp) {
+    font-size: 1.4rem;
+    line-height: 14px;
+  }
+  span {
+    color: color.$base-color;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    @include mixin.mq(sp) {
+      font-size: 1.8rem;
+      line-height: 16px;
+    }
+  }
+}
+
+.td__btn {
+  padding-top: 18px;
+  padding-left: -10px;
+  text-align: center;
+  @include mixin.mq(sp) {
+    padding-top: 9px;
+  }
+
+  a {
+    border: 1px solid color.$base-color;
+    color: color.$base-color;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    border-radius: 50px;
+    padding: 16px 45px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+    @include mixin.mq(sp) {
+      font-size: 1.6rem;
+      line-height: 16px;
+      padding: 12px 19px;
+    }
+
+    &:hover {
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15),
+        0 0 5px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      background: color.$base-color;
+      color: color.$base-color2;
+    }
+  }
+}
+
+.td__btn2 {
+  padding-top: 18px;
+  padding-left: -10px;
+  text-align: center;
+  @include mixin.mq(sp) {
+    padding-top: 9px;
+  }
+
+  a {
+    background: color.$main-color;
+    color: color.$base-color2;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    border-radius: 50px;
+    padding: 16px 45px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+    @include mixin.mq(sp) {
+      font-size: 1.6rem;
+      line-height: 16px;
+      padding: 12px 19px;
+    }
+
+    &:hover {
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15),
+        0 0 5px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      border: 1px solid color.$main-color;
+      background: color.$base-color2;
+      color: color.$main-color;
+    }
+  }
+}
+
+table tr:nth-child(even) td,
+table tr:nth-child(even) th {
+  background-color: color.$main-color3;
+}

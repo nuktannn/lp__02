@@ -1,0 +1,401 @@
+@use "mixin";
+@use "color";
+@use "font";
+
+/*================================
+feature
+===============================*/
+.feature {
+  background: color.$base-color3;
+  padding: 95px 20px 100px;
+  @include mixin.mq(tab) {
+    padding: 60px 20px;
+  }
+  @include mixin.mq(sp) {
+   margin-top: -20px;
+   padding: 60px 0;
+  }
+}
+
+.feature__inner {
+}
+
+.section__sub-title {
+}
+
+.section__title {
+  span {
+    color: color.$main-color;
+    font-size: 6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+    letter-spacing: 3px;
+    @include mixin.mq(tab) {
+      font-size: 3.8rem;
+      line-height: 42px;
+      letter-spacing: 1.9px;
+    }
+    @include mixin.mq(sp) {
+      font-size: 3.8rem;
+      line-height: 42px;
+      letter-spacing: 1.9px;
+    }
+  }
+}
+
+.feature__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 95px;
+  @include mixin.mq(tab) {
+    margin: 40px 40px 0;
+  }
+  @include mixin.mq(sp) {
+    flex-direction: column-reverse;
+    margin-top: 40px;
+  }
+}
+
+.feature__left {
+  background: color.$base-color2;
+  padding: 65px 124px 65px 148px;
+  height: 100%;
+  margin-top: 150px;
+  margin-left: -30px;
+  border-radius: 30px;
+  @include mixin.mq(tab) {
+    padding: 91px 20px 40px;
+  }
+  @include mixin.mq(sp) {
+    margin-top: -80px;
+    margin-left: 0;
+    padding: 100px 20px 40px;
+  }
+}
+
+.feature__title {
+  color: color.$base-color;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  @include mixin.mq(tab) {
+    font-size: 2.2rem;
+  }
+  @include mixin.mq(sp) {
+    font-size: 2.2rem;
+    margin-top: -5px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -100px;
+    width: 70px;
+    height: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: url(../img/feature__number01.png) no-repeat center center /
+      contain;
+    @include mixin.mq(tab) {
+      top: -50px;
+      left: 0px;
+      width: 53px;
+      height: 42px;
+    }
+    @include mixin.mq(sp) {
+      top: -50px;
+      left: 0px;
+      width: 53px;
+      height: 42px;
+    }
+  }
+}
+
+.feature__text {
+  margin-top: 17px;
+  color: color.$base-color;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+  width: 470px;
+  @include mixin.mq(tab) {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 22.4px;
+    width: 100%;
+
+  }
+  @include mixin.mq(sp) {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 22.4px;
+    width: 100%;
+  }
+}
+
+.feature__right {
+  margin-left: -90px;
+  @include mixin.mq(tab) {
+    margin-left: -70px;
+  }
+  @include mixin.mq(sp) {
+    margin-left: 0;
+    z-index: 5;
+  }
+  img {
+    width: 520px;
+    @include mixin.mq(tab) {
+      width: 280px;
+    }
+    @include mixin.mq(sp) {
+      width: 280px;
+    }
+  }
+}
+
+.feature__wrapper2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 95px;
+  flex-direction: row-reverse;
+  @include mixin.mq(tab) {
+   margin: 120px 40px 0;
+  }
+  @include mixin.mq(sp) {
+    flex-direction: column-reverse;
+    margin-top: -20px;
+  }
+}
+
+.feature__left2 {
+  background: color.$base-color2;
+  padding: 65px 124px 65px 148px;
+  height: 100%;
+  margin-left: -70px;
+  border-radius: 30px;
+  margin-top: -120px;
+  @include mixin.mq(tab) {
+    padding: 91px 20px 40px;
+    margin-left: -30px;
+  }
+  @include mixin.mq(sp) {
+    margin-left: 0;
+    padding-top: 100px;
+    padding: 91px 0px 40px;
+    margin-top: -80px;
+  }
+}
+
+.feature__title2 {
+  color: color.$base-color;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  @include mixin.mq(tab) {
+    font-size: 2.2rem;
+  }
+  @include mixin.mq(sp) {
+    font-size: 2.2rem;
+    margin-top: -10px;
+    padding: 0 20px;
+    margin-left: 10px;
+    white-space: nowrap;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -100px;
+    width: 70px;
+    height: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: url(../img/feature__number02.png) no-repeat center center /
+      contain;
+    @include mixin.mq(tab) {
+      top: -50px;
+      left: 0px;
+      width: 53px;
+      height: 42px;
+    }
+    @include mixin.mq(sp) {
+      top: -50px;
+      left: 20px;
+      width: 53px;
+      height: 42px;
+    }
+  }
+}
+
+.feature__text2 {
+  margin-top: 17px;
+  color: color.$base-color;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+  width: 470px;
+  @include mixin.mq(tab) {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 22.4px;
+    width: 100%;
+  }
+  @include mixin.mq(sp) {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 22.4px;
+    width: 100%;
+    padding: 0 20px;
+    margin-left: 10px;
+  }
+}
+
+.feature__right2 {
+  margin-left: 90px;
+  margin-top: 80px;
+  z-index: 5;
+  @include mixin.mq(tab) {
+   margin-left: 0px;
+  }
+  @include mixin.mq(sp) {
+    margin-left: 0;
+  }
+  img {
+    width: 520px;
+    @include mixin.mq(tab) {
+        width: 280px;
+      }
+      @include mixin.mq(sp) {
+        width: 280px;
+      }
+  }
+}
+
+.feature__wrapper3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -65px;
+  @include mixin.mq(tab) {
+    margin: 40px 40px 0;
+  }
+  @include mixin.mq(sp) {
+    flex-direction: column-reverse;
+    margin-top: 80px;
+  }
+}
+
+.feature__left3 {
+  background: color.$base-color2;
+  padding: 65px 124px 65px 148px;
+  height: 100%;
+  margin-top: 150px;
+  margin-left: -20px;
+  border-radius: 30px;
+  @include mixin.mq(tab) {
+    padding: 91px 20px 40px;
+  }
+  @include mixin.mq(sp) {
+    margin-top: -70px;
+    padding: 91px 20px 40px;
+  }
+}
+
+.feature__title3 {
+  color: color.$base-color;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: relative;
+  @include mixin.mq(tab) {
+    font-size: 2.2rem;
+  }
+  @include mixin.mq(sp) {
+    font-size: 2.4rem;
+    padding: 0 20px;
+    margin-top: -13px;
+    margin-left: 0px;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: -100px;
+    width: 70px;
+    height: 52px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: url(../img/feature__number03.png) no-repeat center center /
+      contain;
+      @include mixin.mq(tab) {
+        top: -50px;
+        left: 0px;
+        width: 53px;
+        height: 42px;
+      }
+      @include mixin.mq(sp) {
+        top: -50px;
+        left: 20px;
+        width: 53px;
+        height: 42px;
+      }
+    }
+}
+
+.feature__text3 {
+  margin-top: 17px;
+  color: color.$base-color;
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28.8px;
+  width: 470px;
+  @include mixin.mq(tab) {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 22.4px;
+    width: 100%;
+  }
+  @include mixin.mq(sp) {
+    margin-top: 8px;
+    font-size: 1.4rem;
+    line-height: 22.4px;
+    width: 100%;
+    padding: 0 20px;
+    margin-left: 0px;
+  }
+}
+
+.feature__right3 {
+  margin-left: -80px;
+  margin-top: -20px;
+  z-index: 5;
+  @include mixin.mq(tab) {
+    margin-left: -70px;
+  }
+  @include mixin.mq(sp) {
+    margin-left: 0;
+  }
+  img {
+    width: 520px;
+    @include mixin.mq(tab) {
+      width: 280px;
+    }
+    @include mixin.mq(sp) {
+      width: 280px;
+    }
+  }
+}

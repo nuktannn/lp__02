@@ -1,0 +1,73 @@
+@use "mixin";
+@use "color";
+@use "font";
+
+/*================================
+trial
+===============================*/
+.trial {
+  background: color.$base-color;
+  padding: 60px 0;
+  @include mixin.mq(sp) {
+    padding: 40px 0;
+  }
+}
+
+.trial__inner {
+}
+
+.trial__title {
+  color: color.$base-color2;
+  text-align: center;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.72px;
+  @include mixin.mq(sp) {
+    font-size: 1.8rem;
+    line-height: 28.8px;
+    letter-spacing: 0.36px;
+  }
+}
+
+.section__btn {
+}
+
+.trial__link {
+  margin-top: 32px;
+  text-align: center;
+  @include mixin.mq(sp) {
+    margin-top: 24px;
+  }
+
+  a {
+    color: color.$base-color2;
+    background: color.$main-color;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.48px;
+    border-radius: 50px;
+    padding: 23px 53px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0, 0, 0, 0.22);
+    transition: 0.3s;
+
+    &:hover {
+      box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15),
+        0 0 5px rgba(0, 0, 0, 0.1);
+      transform: translateY(-4px);
+      border:1px solid color.$main-color;
+      background: color.$base-color2;
+      color: color.$main-color;
+    }
+    @include mixin.mq(sp) {
+      padding: 20px 42px;
+      font-size: 1.8rem;
+      line-height: 18px;
+    }
+  }
+}

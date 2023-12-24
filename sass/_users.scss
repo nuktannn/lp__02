@@ -1,0 +1,50 @@
+@use "mixin";
+@use "color";
+@use "font";
+
+/*================================
+users
+===============================*/
+.users {
+    padding: 100px 200px;
+    @include mixin.mq(tab) {
+        padding: 100px 0;
+    }
+    @include mixin.mq(sp) {
+        padding: 60px 0px;
+    }
+
+}
+
+.users__inner {
+
+}
+
+.users__image {
+    display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap:50px 40px;
+      @include mixin.mq(pc) {
+        max-width: 1200px;
+        margin: 40px auto 0;
+      }
+      @include mixin.mq(tab) {
+        gap: 0;
+        max-width: 900px;
+        margin: 40px auto 0;
+      }
+      @include mixin.mq(sp) {
+        gap:20px 10px;
+        max-width: 370px;
+        margin: 10px auto 0;
+      }
+    img{
+        width: 213px;
+        @include mixin.mq(sp) {
+            width: 75px;
+        }
+    }
+}
+

@@ -1,0 +1,97 @@
+@use "mixin";
+@use "color";
+@use "font";
+
+/*================================
+base
+===============================*/
+html,
+body {
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  line-height: 1.5;
+  font-size: 1.6rem;
+
+  @include mixin.mq(small) {
+    min-width: 370px;
+    overflow-x: scroll;
+  }
+}
+img {
+  width: 100%;
+  display: block;
+}
+
+a {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+}
+
+.inner {
+  max-width: mixin.$layout-width-inner;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+@include mixin.mq(pc) {
+  .pc-hidden {
+    display: none;
+  }
+}
+@include mixin.mq(tab) {
+  .pc-hidden {
+    display: none;
+  }
+}
+@include mixin.mq(sp) {
+  .sp-hidden {
+    display: none;
+  }
+}
+
+/*================================
+section
+===============================*/
+.section__btn {
+
+  a {
+    
+  }
+}
+
+.section__sub-title {
+  color: color.$main-color2;
+  text-align: center;
+  font-family: font.$font-en;
+  font-size: 3.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  @include mixin.mq(sp) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.section__title {
+  margin-top: 18px;
+  color: color.$main-color;
+  text-align: center;
+  font-size: 4.8rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 2.4px;
+  @include mixin.mq(sp) {
+    margin-top: 9px;
+    font-size: 3rem;
+    line-height: 42px;
+    letter-spacing: 1.5px;
+  }
+}
